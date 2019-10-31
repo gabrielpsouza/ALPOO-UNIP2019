@@ -29,6 +29,7 @@ import view.ViewInitialPage;
 import view.viewBookDetail;
 import view.viewInsertPublisher;
 
+
 public class LivrariaController {
 
 	private ViewInitialPage _ViewInitialPage;
@@ -40,7 +41,7 @@ public class LivrariaController {
 	public LivrariaController() {
 		options = new String[2];
 		options[0] = new String("Sim");
-		options[1] = new String("N„o");
+		options[1] = new String("N√£o");
 		
 		_ViewInitialPage = new ViewInitialPage();
 		_LivrariaDAO = new livrariaDAO();
@@ -125,7 +126,7 @@ public class LivrariaController {
 					} else if (button.getName() == "btnExcluir") {
 
 						int resposta = JOptionPane.showOptionDialog(_ViewInitialPage, "Deseja excluir este livro?",
-								"Exclus„o", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null,
+								"Exclus√£o", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null,
 								options, null);
 						if (resposta == JOptionPane.YES_OPTION) {
 							Livro llivro = _ViewInitialPage.getLivroBySelectedRow();
